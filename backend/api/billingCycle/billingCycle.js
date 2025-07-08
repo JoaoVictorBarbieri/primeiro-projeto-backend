@@ -1,7 +1,6 @@
-const { upperCase, min, max } = require("lodash");
-const { mongo } = require("mongoose");
-const restful = require("node-restful");
-const mongoose = restful.mongoose;
+// api/billingCycle/billingCycle.js - ATUALIZADO
+
+const mongoose = require("mongoose");
 
 const creditSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -31,4 +30,4 @@ const billingCycleSchema = new mongoose.Schema({
   debts: [debtSchema],
 });
 
-module.exports = restful.model("BillingCycle", billingCycleSchema);
+module.exports = mongoose.model("BillingCycle", billingCycleSchema);

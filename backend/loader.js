@@ -1,3 +1,5 @@
 const server = require("./config/server");
-require("./config/database");
+const connectDB = require("./config/database");
 require("./config/routes")(server);
+
+connectDB();
